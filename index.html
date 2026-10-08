@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SONDERA — Architectural Concept · High Desert Sanctuary</title>
+  <meta name="description" content="A digital hospitality experience for an off-grid architectural retreat in the California High Desert. Four standalone thermal concrete pavilions powered entirely by solar energy.">
+  <link rel="canonical" href="https://sondera-retreat.netlify.app">
+
+  <!-- Open Graph & Twitter Social Metadata -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="SONDERA — Off-Grid Architectural Shelters">
+  <meta property="og:description" content="Four standalone concrete pavilions situated across 60 unpaved acres in the California High Desert.">
+  <meta property="og:image" content="images/hero.jpeg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Favicon & Typography -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%23181716'>S</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Ambient Grain Overlay -->
+  <svg class="noise-overlay" aria-hidden="true" focusable="false">
+    <filter id="noiseFilter">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch"/>
+    </filter>
+    <rect width="100%" height="100%" filter="url(#noiseFilter)"/>
+  </svg>
+
+  <!-- 00. Site Header & Mobile Drawer -->
+  <header class="site-header" id="site-header">
+    <div class="header-container">
+      <a href="#hero" class="brand-logo" aria-label="Sondera Retreat Home">SONDERA</a>
+      
+      <nav class="nav-desktop" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link">Property</a></li>
+          <li><a href="#stay" class="nav-link">Pavilions</a></li>
+          <li><a href="#experience" class="nav-link">Rhythm</a></li>
+          <li><a href="#booking" class="nav-link nav-link--cta">Reserve</a></li>
+        </ul>
+      </nav>
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-drawer">
+        <span class="menu-toggle__line"></span>
+        <span class="menu-toggle__line"></span>
+      </button>
+    </div>
+
+    <!-- Navigation Drawer -->
+    <div class="nav-drawer" id="nav-drawer" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Navigation Menu">
+      <div class="container nav-drawer__inner">
+        <span class="eyebrow nav-drawer__label">Index</span>
+        <ul class="nav-drawer__list">
+          <li><a href="#hero" class="drawer-link">00 / Overview</a></li>
+          <li><a href="#about" class="drawer-link">01 / Property</a></li>
+          <li><a href="#stay" class="drawer-link">02 / Pavilions</a></li>
+          <li><a href="#experience" class="drawer-link">03 / Rhythm</a></li>
+          <li><a href="#landscape" class="drawer-link">04 / Wilderness</a></li>
+          <li><a href="#booking" class="drawer-link">05 / Reserve</a></li>
+        </ul>
+        <div class="nav-drawer__footer">
+          <p class="eyebrow eyebrow--clay">Architectural Hospitality Concept</p>
+          <p class="drawer-meta">California High Desert · Private Parcel</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- 01. Hero Section -->
+    <section class="hero" id="hero">
+      <div class="hero__media">
+        <img 
+          src="assets/hero.jpeg" 
+          alt="Low-slung minimalist architectural concrete pavilion grounded in desert terrain"
+          class="hero__image"
+          loading="eager"
+        >
+        <div class="hero__scrim"></div>
+      </div>
+
+      <div class="hero__content container">
+        <div class="hero__top-meta hero-animate" style="--delay: 100ms">
+          <span class="eyebrow eyebrow--light">Concept Stay · California High Desert</span>
+          <span class="eyebrow eyebrow--light">Private Parcel by Reservation</span>
+        </div>
+
+        <div class="hero__center-title hero-animate" style="--delay: 250ms">
+          <h1 class="hero__headline">
+            Off-grid shelters<br>
+            <span class="headline-italic">in the High Desert</span><br>
+            basin.
+          </h1>
+        </div>
+
+        <div class="hero__bottom-bar hero-animate" style="--delay: 400ms">
+          <p class="hero__subtext">
+            Four private concrete pavilions situated on sixty unpaved desert acres.
+          </p>
+          <a href="#about" class="hero__scroll-cue" aria-label="Explore Property">
+            <span>Explore Property</span>
+            <span class="scroll-arrow" aria-hidden="true">↓</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02. Property Introduction -->
+    <section class="intro" id="about">
+      <div class="container">
+        
+        <div class="intro__top">
+          <span class="eyebrow">01 / Site</span>
+          <span class="intro__sublabel">Operations & Architecture</span>
+        </div>
+
+        <div class="intro__divider"></div>
+
+        <div class="intro__grid">
+          
+          <!-- Sticky Rail Overview -->
+          <div class="intro__statement-col">
+            <h2 class="intro__headline">
+              Built into the basin.<br>
+              <em class="intro__headline-italic">Powered by the sun.</em>
+            </h2>
+            <p class="intro__lead">
+              Sixty private acres buffered by silence. Accessed via a two-mile unpaved gravel approach.
+            </p>
+
+            <div class="intro__meta-grid">
+              <div class="intro__meta-item">
+                <span class="meta-label">Elevation</span>
+                <span class="meta-val">2,840 FT</span>
+              </div>
+              <div class="intro__meta-item">
+                <span class="meta-label">Solar Output</span>
+                <span class="meta-val">48 kWh / Day</span>
+              </div>
+              <div class="intro__meta-item">
+                <span class="meta-label">Water Reserve</span>
+                <span class="meta-val">12,000 Gallons</span>
+              </div>
+              <div class="intro__meta-item">
+                <span class="meta-label">Spacing</span>
+                <span class="meta-val">80m Min Separation</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Narrative Overview -->
+          <div class="intro__narrative-col">
+            <div class="intro__image-wrapper">
+              <img 
+                src="assets/sec1.jpeg" 
+                alt="Off-grid thermal concrete structure and courtyard in the desert"
+                class="intro__image"
+                loading="lazy"
+              >
+              <span class="intro__image-caption">Central Courtyard · Site-cast thermal concrete</span>
+            </div>
+
+            <div class="intro__body">
+              <p>
+                Constructed from heavy thermal concrete and aggregate sourced directly on-site, each shelter stabilizes interior temperatures against extreme desert swings without noisy mechanical systems.
+              </p>
+              <p>
+                Four standalone pavilions. Eighty metres apart. No shared walls. No adjoining rooms.
+              </p>
+              <p>
+                The retreat functions entirely off-grid: solar storage battery banks, closed-loop greywater recycling, and low-earth orbit Starlink internet for remote working.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 03. Pavilions Grid -->
+    <section class="pavilions-section" id="stay">
+      <div class="container">
+
+        <div class="pavilions-section__header">
+          <span class="eyebrow">02 / Residences</span>
+          <span class="pavilions-section__count">Four Standalone Pavilions</span>
+        </div>
+
+        <div class="pavilions-grid">
+          
+          <!-- Pavilion 01 Card -->
+          <article class="pavilion-card">
+            <div class="pavilion-card__frame">
+              <img 
+                src="assets/pav1.jpeg" 
+                alt="Pavilion 01 minimal concrete structure set low against the desert basin"
+                class="pavilion-card__image"
+                loading="lazy"
+              >
+              <span class="pavilion-card__tag">01 / East Basin</span>
+            </div>
+            <div class="pavilion-card__body">
+              <div class="pavilion-card__heading">
+                <h3 class="pavilion-card__title">Pavilion 01</h3>
+                <span class="pavilion-card__rate">$840 / nt</span>
+              </div>
+              <p class="pavilion-card__desc">
+                Oriented toward the eastern ridge to capture dawn light. Features a sunken outdoor cold plunge basin and induction pantry.
+              </p>
+              <ul class="pavilion-card__specs">
+                <li><span>Footprint</span><strong>42 m² + 30 m² Terrace</strong></li>
+                <li><span>Feature</span><strong>Sunken Plunge & Firepit</strong></li>
+                <li><span>Occupancy</span><strong>2 Adults · King Platform</strong></li>
+              </ul>
+              <a href="#booking" class="pavilion-card__btn" data-pavilion="pavilion-01">
+                <span>Select Pavilion 01</span>
+                <span>→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Pavilion 02 Card -->
+          <article class="pavilion-card">
+            <div class="pavilion-card__frame">
+              <img 
+                src="assets/pav2.jpeg" 
+                alt="Pavilion 02 perched upon elevated western rocky ridge shelf"
+                class="pavilion-card__image"
+                loading="lazy"
+              >
+              <span class="pavilion-card__tag">02 / West Ridge</span>
+            </div>
+            <div class="pavilion-card__body">
+              <div class="pavilion-card__heading">
+                <h3 class="pavilion-card__title">Pavilion 02</h3>
+                <span class="pavilion-card__rate">$890 / nt</span>
+              </div>
+              <p class="pavilion-card__desc">
+                Elevated on a granite shelf for direct sunset vistas. Equipped with an exterior cedar soaking tub and sheltered fire lounge.
+              </p>
+              <ul class="pavilion-card__specs">
+                <li><span>Footprint</span><strong>48 m² + 35 m² Terrace</strong></li>
+                <li><span>Feature</span><strong>Cedar Soaking Tub</strong></li>
+                <li><span>Occupancy</span><strong>2 Adults · King Platform</strong></li>
+              </ul>
+              <a href="#booking" class="pavilion-card__btn" data-pavilion="pavilion-02">
+                <span>Select Pavilion 02</span>
+                <span>→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Pavilion 03 Card -->
+          <article class="pavilion-card">
+            <div class="pavilion-card__frame">
+              <img 
+                src="assets/pav3.jpeg" 
+                alt="Pavilion 03 built directly into natural desert stone formations and boulders"
+                class="pavilion-card__image"
+                loading="lazy"
+              >
+              <span class="pavilion-card__tag">03 / Boulder Site</span>
+            </div>
+            <div class="pavilion-card__body">
+              <div class="pavilion-card__heading">
+                <h3 class="pavilion-card__title">Pavilion 03</h3>
+                <span class="pavilion-card__rate">$940 / nt</span>
+              </div>
+              <p class="pavilion-card__desc">
+                Sheltered naturally against monolithic boulders. Features a rooftop stargazing deck and protected outdoor shower.
+              </p>
+              <ul class="pavilion-card__specs">
+                <li><span>Footprint</span><strong>55 m² + 40 m² Terrace</strong></li>
+                <li><span>Feature</span><strong>Stargazing Roof Deck</strong></li>
+                <li><span>Occupancy</span><strong>2 Adults · King Platform</strong></li>
+              </ul>
+              <a href="#booking" class="pavilion-card__btn" data-pavilion="pavilion-03">
+                <span>Select Pavilion 03</span>
+                <span>→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Pavilion 04 Card -->
+          <article class="pavilion-card">
+            <div class="pavilion-card__frame">
+              <img 
+                src="assets/pav4.jpeg" 
+                alt="Pavilion 04 isolated modernist pavilion at higher elevation"
+                class="pavilion-card__image"
+                loading="lazy"
+              >
+              <span class="pavilion-card__tag">04 / South Highlands</span>
+            </div>
+            <div class="pavilion-card__body">
+              <div class="pavilion-card__heading">
+                <h3 class="pavilion-card__title">Pavilion 04</h3>
+                <span class="pavilion-card__rate">$1,020 / nt</span>
+              </div>
+              <p class="pavilion-card__desc">
+                Positioned at highest elevation for complete isolation. Includes a private dry cedar sauna, record console, and panoramic valley view.
+              </p>
+              <ul class="pavilion-card__specs">
+                <li><span>Footprint</span><strong>60 m² + 50 m² Terrace</strong></li>
+                <li><span>Feature</span><strong>Dry Cedar Sauna</strong></li>
+                <li><span>Occupancy</span><strong>2 Adults · King Platform</strong></li>
+              </ul>
+              <a href="#booking" class="pavilion-card__btn" data-pavilion="pavilion-04">
+                <span>Select Pavilion 04</span>
+                <span>→</span>
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 04. Daily Rhythm Timeline -->
+    <section class="timeline" id="experience">
+      <div class="container">
+
+        <div class="timeline__header">
+          <span class="eyebrow">03 / Routine</span>
+          <h2 class="timeline__title">Daily Rhythm</h2>
+        </div>
+
+        <div class="timeline__divider"></div>
+
+        <div class="timeline__list">
+          
+          <article class="timeline__item">
+            <div class="timeline__time-block">
+              <span class="timeline__time">06:14</span>
+              <span class="timeline__phase">Dawn</span>
+            </div>
+            <div class="timeline__content">
+              <h3 class="timeline__heading">East Horizon Light</h3>
+              <p class="timeline__desc">
+                Direct sun breaks the ridge. Pavilions face east to absorb early warmth before midday heat sets in.
+              </p>
+            </div>
+          </article>
+
+          <article class="timeline__item">
+            <div class="timeline__time-block">
+              <span class="timeline__time">08:30</span>
+              <span class="timeline__phase">Morning</span>
+            </div>
+            <div class="timeline__content">
+              <h3 class="timeline__heading">Provisions Drop</h3>
+              <p class="timeline__desc">
+                Fresh sourdough, sheep curd, dates, and roasted coffee left quietly at your terrace vestibule box.
+              </p>
+            </div>
+          </article>
+
+          <article class="timeline__item">
+            <div class="timeline__time-block">
+              <span class="timeline__time">11:20</span>
+              <span class="timeline__phase">Midday</span>
+            </div>
+            <div class="timeline__content">
+              <h3 class="timeline__heading">Foot Trail Access</h3>
+              <p class="timeline__desc">
+                Private foot paths connect directly to unmarked granite outcrops and ancient desert washes.
+              </p>
+            </div>
+          </article>
+
+          <article class="timeline__item">
+            <div class="timeline__time-block">
+              <span class="timeline__time">18:42</span>
+              <span class="timeline__phase">Dusk</span>
+            </div>
+            <div class="timeline__content">
+              <h3 class="timeline__heading">Hearth & Hardwood</h3>
+              <p class="timeline__desc">
+                Terrace firepits stocked with seasoned mesquite. Basin temperatures drop rapidly after twilight.
+              </p>
+            </div>
+          </article>
+
+          <article class="timeline__item">
+            <div class="timeline__time-block">
+              <span class="timeline__time">22:10</span>
+              <span class="timeline__phase">Night</span>
+            </div>
+            <div class="timeline__content">
+              <h3 class="timeline__heading">Dark Sky Window</h3>
+              <p class="timeline__desc">
+                Zero upward exterior lighting across the parcel ensures uncompromised visibility of the galactic core.
+              </p>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 05. Landscape Section -->
+    <section class="landscape" id="landscape">
+      <div class="landscape__frame">
+        <img 
+          src="assets/sec4.jpeg" 
+          alt="Wide expanse of the High Desert basin and boundary mountains"
+          class="landscape__image"
+          loading="lazy"
+        >
+        <div class="landscape__scrim"></div>
+        <div class="container landscape__content">
+          <span class="eyebrow eyebrow--light">04 / Wilderness</span>
+          <blockquote class="landscape__statement">
+            60 unpaved acres buffered by silence.
+          </blockquote>
+          <p class="landscape__meta">
+            No street lighting · No adjoining roads · Elevation 2,840 FT
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06. Reservation Console -->
+    <section class="booking-section" id="booking">
+      <div class="container">
+        
+        <div class="booking-section__meta">
+          <span class="eyebrow eyebrow--clay">Reservation Interface</span>
+          <span class="eyebrow eyebrow--light">Calendar Open · 2026 / 2027</span>
+        </div>
+
+        <div class="booking-section__grid">
+          
+          <div class="booking-section__narrative">
+            <h2 class="booking-section__headline">
+              Book your stay.<br>
+              <em class="booking-section__italic">Direct confirmation.</em>
+            </h2>
+            <p class="booking-section__desc">
+              Four standalone structures spaced at least 80 metres apart. Keypad access with personal codes transmitted 48 hours prior to arrival.
+            </p>
+            <div class="booking-section__note">
+              <span class="note-label">Guidelines</span>
+              <span class="note-text">Strict two-night minimum. No pets permitted due to local protected fauna. Check-in 15:00 · Check-out 11:00.</span>
+            </div>
+          </div>
+
+          <div class="booking-section__console">
+            <form class="reservation-form" id="reservation-form">
+              
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="check-in-date" class="form-label">Arrival Date</label>
+                  <input 
+                    type="date" 
+                    id="check-in-date" 
+                    name="check-in" 
+                    required 
+                    class="form-input"
+                  >
+                </div>
+                
+                <div class="form-field">
+                  <label for="check-out-date" class="form-label">Departure Date</label>
+                  <input 
+                    type="date" 
+                    id="check-out-date" 
+                    name="check-out" 
+                    required 
+                    class="form-input"
+                  >
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="shelter-select" class="form-label">Structure</label>
+                  <select id="shelter-select" name="shelter" class="form-select">
+                    <option value="pavilion-01">Pavilion 01 — East Basin (Max 2)</option>
+                    <option value="pavilion-02">Pavilion 02 — West Ridge (Max 2)</option>
+                    <option value="pavilion-03">Pavilion 03 — Boulder Site (Max 2)</option>
+                    <option value="pavilion-04">Pavilion 04 — South Highlands (Max 2)</option>
+                    <option value="buyout">Property Buyout — All 4 Pavilions (Max 8)</option>
+                  </select>
+                </div>
+
+                <div class="form-field">
+                  <label for="guest-count" class="form-label">Guests</label>
+                  <select id="guest-count" name="guests" class="form-select">
+                    <option value="1">1 Adult</option>
+                    <option value="2" selected>2 Adults</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Calculation Output -->
+              <div class="form-summary">
+                <div class="summary-line">
+                  <span class="summary-rate" id="summary-rate-display">$840 × 2 nights</span>
+                  <span class="summary-total" id="summary-total-display">$1,680</span>
+                </div>
+                <div class="summary-breakdown">
+                  <span id="summary-tax-display">+ $201 local bed tax (12%)</span>
+                  <span class="summary-est" id="summary-est-display">Est. Total: $1,881 USD</span>
+                </div>
+              </div>
+
+              <button type="submit" class="reservation-submit" id="reservation-submit">
+                <span>Request Reservation</span>
+                <span class="btn-arrow" aria-hidden="true">→</span>
+              </button>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Reservation Confirmation Modal -->
+  <dialog class="modal-dialog" id="booking-modal" aria-labelledby="modal-title">
+    <div class="modal-dialog__card">
+      <span class="eyebrow eyebrow--clay">Reservation Recorded</span>
+      <h3 class="modal-dialog__title" id="modal-title">Dates Requested</h3>
+      <p class="modal-dialog__copy" id="modal-desc">
+        Your stay request has been initialized. Complete GPS coordinates and access keycodes will be transmitted 48 hours prior to check-in.
+      </p>
+      <div class="modal-dialog__details" id="modal-details"></div>
+      <button class="modal-dialog__close" id="modal-close-btn" type="button">Close Window</button>
+    </div>
+  </dialog>
+
+  <!-- Floating Reservation Dock -->
+  <aside class="floating-dock" id="floating-dock" aria-hidden="true">
+    <div class="floating-dock__inner">
+      <div class="floating-dock__info">
+        <span class="floating-dock__title">Sondera Concept</span>
+        <span class="floating-dock__rate" id="dock-rate-display">From $840 / night</span>
+      </div>
+      <a href="#booking" class="floating-dock__cta">Reserve Dates →</a>
+    </div>
+  </aside>
+
+  <!-- 07. Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="footer-logo">SONDERA</span>
+          <p class="footer-tagline">Architectural hospitality concept situated in the California High Desert.</p>
+        </div>
+
+        <div class="footer-columns">
+          <div class="footer-col">
+            <span class="eyebrow eyebrow--light">Concept Spec</span>
+            <p class="footer-address">
+              Portfolio Case Study · 2026<br>
+              Architectural Concept<br>
+              California High Desert
+            </p>
+          </div>
+
+          <div class="footer-col">
+            <span class="eyebrow eyebrow--light">Inquiries</span>
+            <ul class="footer-links">
+              <li><a href="mailto:contact@example.com">contact@example.com</a></li>
+              <li><a href="https://github.com" target="_blank" rel="noopener noreferrer">Source Code on GitHub ↗</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <span class="eyebrow eyebrow--light">Index</span>
+            <ul class="footer-links">
+              <li><a href="#about">The Property</a></li>
+              <li><a href="#stay">Pavilions</a></li>
+              <li><a href="#experience">Rhythm</a></li>
+              <li><a href="#booking">Reservations</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom">
+        <p class="footer-legal">SONDERA — DIGITAL HOSPITALITY CASE STUDY. CRAFTED WITH VANILLA HTML, CSS & JAVASCRIPT.</p>
+        <p class="footer-coords">HIGH DESERT BASIN · ELEV 2,840 FT</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
